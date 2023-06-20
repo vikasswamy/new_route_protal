@@ -1,0 +1,61 @@
+<!-- <div class="my-container">
+  <h4>Routing Portal</h4>
+  <app-header></app-header>
+  <mat-drawer-container style="background-color: transparent">
+    <mat-drawer
+      mode="side"
+      opened
+      style="
+        height: 80%;
+        background-color: rgba(0, 0, 0, 0.313);
+        border-radius: 5px;
+        margin-left: 10px;
+      "
+    >
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div> -->
+<div class="header-main">
+  <div class="logo-name">
+    <img src="../../../assets/images/OPS-Connect-Logo-Dark-Background-RGB.png" alt="OPS-Connect-Logo-Dark-Background-RGB">
+    <!-- <h1 style="font-weight: 500">OPS Connect</h1> -->
+    <h1 style="font-weight: 400">Connect Home</h1>
+  </div>
+
+
+  <div class="header-names">
+    <h3 style="font-weight: 300">Routing Portal</h3>
+    <h1 style="font-weight: 500; font-size: 2rem;">Daily Edits</h1>
+  </div>
+
+  <div class="user-profile">
+    <h3>Andrew Smith</h3>
+    <h3 style="color:rgb(255, 251, 0); text-decoration: underline; font-style: italic;">Sign Out</h3>
+    <h3 style="font-weight: 400;">Wednesday , 19-06-2023</h3>
+  </div>
+</div>
+
+<div class="my-container">
+  <app-header></app-header>
+  <mat-drawer-container style="background-color: transparent">
+    <mat-drawer
+      mode="side"
+      opened
+      style="
+        height: 575px;
+        background-color: rgba(0, 0, 0, 0.313);
+        border-radius: 5px;
+        margin-left: 10px;
+      "
+    >
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

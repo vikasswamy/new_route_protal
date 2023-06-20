@@ -1,0 +1,167 @@
+<div  class="dashboard-mycontainer">
+    <div class="row ">
+        <div class="col-md-9 main">
+            <div class="row">
+                <div class="colorgrid">
+                    
+                </div>
+                <div class="search_bar">
+                    
+                    <!-- <nb-form-field>
+                        <input fullWidth #autoInput nbInput type="text" (input)="onChange()" placeholder="Search"
+                        [nbAutocomplete]="auto" class="boxwidth text" />
+                        <button nbSuffix nbButton ghost >
+                        <nb-icon [icon]="'search-outline'" pack="eva" >
+
+                        </nb-icon>
+                    </button>
+                    <nb-autocomplete #auto (selectedChange)="changeRouteId($event)">
+
+                        <nb-option *ngFor="let route of filteredOptions$ | async" [(selected)]="selectedstaffdetails"
+                        [value]="route.AssignedTo">
+                        {{route.ScopeOfWork}}
+                        </nb-option>
+
+                    </nb-autocomplete>
+                    </nb-form-field> -->
+                   
+                    <!-- <input fullWidth #autoInput nbInput type="text" (input)="onChange()" placeholder="Select RouteId"
+                    [nbAutocomplete]="auto" class="boxwidth text" />
+
+                <nb-autocomplete #auto (selectedChange)="changeRouteId($event)">
+
+                    <nb-option *ngFor="let route of filteredOptions$ | async" [(selected)]="selectRouteId"
+                        [value]="route.RouteId">
+                        {{route.RouteId}}
+                    </nb-option>
+
+                </nb-autocomplete> -->
+                </div>
+                <div id="state-legend" class="legend">
+                                                 
+                    
+                </div>
+                <div class="optimize_btn">
+                    <button type="button" class="btn btn-primary" style="font-size: 0.8rem;"  id="left-panel-link" (click)="optimize($event)" >Optimize Route</button>
+
+                </div>
+                <div id="item3" class=" item3">
+                    <div class="temp">Space Usage Indicator</div>
+                    <div id="stopwatch">
+                        <div class="time">
+                            <div style="background-color:#6e560e ; width: 98.77px; " class="stat">
+                              
+                                <span>Unoccupied</span>
+                            </div>
+                            <div style="background-color:#3e5712 ;width: 84.77px;" class="stat">
+                                
+                                <span >Low</span>
+                            </div>
+                            <div style="background-color:#5a1616;width: 84.77px;" class="stat">
+                                
+                                <span >High</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div id="card">
+                        <div id="stopwatch">
+                            <div style="margin-bottom:-35px ; display: inline-block; top: 0px;" class="media">
+                                <div class="pr-3 time ">
+                                    
+                                    <div class="stat">
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            
+
+                        </div>
+                    </div> -->
+
+                </div>
+                    <div class="mapstyling">
+                        <div id="view-mapbox" class="match-parent"></div><br>
+                       
+                    </div>
+                
+                
+            </div>
+            
+        </div>
+        <div class="col-md-3 ">
+            <div class="card">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="mb-0 mt-1 staffName"><form class="example-form">
+                            <!-- <mat-form-field appearance="outline"
+                            class="example-full-width">
+                            <mat-label>Search Team Member</mat-label> -->
+                            <input matInput #autoInput 
+                                    placeholder="Search Team Member"
+                                    aria-label="Search Team Member"
+                                    [matAutocomplete]="auto"
+                                    [formControl]="stateCtrl"
+                                    class="search-input"
+                                    >
+                                    <!-- <mat-icon matSuffix>search</mat-icon> -->
+                            <mat-autocomplete #auto  >
+                                <mat-option *ngFor="let state of filteredStates  | async"  [value]="state.AssignedTo">
+                                    <span>{{state.ScopeOfWork}}</span> |
+                                     <small>Email: {{state.AssignedTo}}</small>
+                               
+                                </mat-option>
+                            </mat-autocomplete>
+                            <!-- </mat-form-field> -->
+                        </form></div><br>
+                        <div class="pl-3 pt-1 pb-1 mt-2 mb-2 d-flex justify-content-between fullrounded text-white stats">
+                           <span class="inside"> Task Allocation Time: 100/100 </span> 
+                        </div>
+                         <span class="routeID">Route Id: 1066RAM</span>
+                       
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion container">
+                            <div class="accordion__container" id="accordion__container">
+                                <!-- <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        
+                                        <h3 class="accordion__title">What's an accordion?</h3>
+                                    </div>
+                    
+                                    <div class="accordion__content">
+                                        <p class="accordion__description">
+                                            expansion, and the spacing between them.
+                                        </p>
+                                    </div>
+                                </div>
+                
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        
+                                        <h3 class="accordion__title">When and how should it be used?</h3>
+                                    </div>
+                    
+                                    <div class="accordion__content">
+                                        <p class="accordion__description">
+                                             a single page.
+                                        </p>
+                                    </div>
+                                </div> -->
+                
+                              
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="card-footer">
+                      <button type="button" class="confirm-button" id="left-panel-link" >Confirm Changes & Assign Update</button>
+                    
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+
+  <div class="mycontainer"  >
+
+    <div>
+      <span class="filter">FILTERS</span> 
+      <span (click)="clearFilters(selectedValue,selectedFloorValue)" class="clear">Clear</span>
+    </div>
+    <br/>
+      <mat-card  class="sidebar-header-div">
+          <mat-card-header class="sidebar-select">
+            <mat-card-title class="sidebar-header">LOCATION</mat-card-title>
+            <mat-card-subtitle class="sidebar-header2">AMAZON HQ</mat-card-subtitle>
+          </mat-card-header>
+      </mat-card>
+      <h4 class="sidebar-heading">SHIFT</h4>
+    
+       
+          <!-- <mat-form-field >
+    
+            <mat-label>Select Shift</mat-label>
+
+            <mat-select #selectedValue>
+
+              <mat-option *ngFor="let shift of shifts" [value]="shift.value" (click)="getShiftandFloorSelectedValues(selectedValue.value, selectedFloorValue.value)">
+
+                {{shift.title}}
+
+              </mat-option>
+
+            </mat-select>
+
+          </mat-form-field> -->
+          <div >
+            <select #selectedValue class="custom-select">
+              <option *ngFor="let shift of shifts" class="select-options"  [value]="shift.value" (click)="getShiftandFloorSelectedValues(selectedValue.value, selectedFloorValue.value)">
+                {{shift.title}}
+              </option>
+            </select>
+          </div>
+    
+    
+              <!-- <h3>FLOOR</h3> -->
+              <h4 class="sidebar-heading">FLOOR</h4>
+  
+    
+              <!-- <mat-form-field >
+    
+                  <mat-label class="mat-select">Select Floor</mat-label>
+    
+                  <mat-select #selectedFloorValue >
+    
+                    <mat-option *ngFor="let floor of floors" [value]="floor.value" (click)="getShiftandFloorSelectedValues(selectedValue.value, selectedFloorValue.value)">
+    
+                      {{floor.title}}
+    
+                    </mat-option>
+    
+                  </mat-select>
+    
+             </mat-form-field> -->
+             <div>
+              <select #selectedFloorValue class="custom-select" placeholder="select shift">
+                <option class="select-options" *ngFor="let floor of floors" [value]="floor.value" (click)="getShiftandFloorSelectedValues(selectedValue.value, selectedFloorValue.value)">{{floor.title}}</option>
+              </select>
+             </div>
+    
+            <!-- <label id="example-radio-group-label" class="sidebar-heading">SELECT ROUTES</label> -->
+    
+            <!-- <div *ngFor="let route of routes; let i=index;"  class="checkbox-div">
+    
+                <input type="checkbox" [value]="route.value" [(ngModel)]="route.checked"(click)="routeselectedvalues(route.value)" class="custom-checkbox"><label class="custom-label">{{route.title}}</label>
+                   
+              </div> -->
+    
+        </div>
